@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "../extra/Container";
 import logo from "../assets/devspring.png";
 import { CiSearch } from "react-icons/ci";
@@ -8,16 +8,45 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  // Detect scroll direction and show/hide navbar
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    // Initialize `isScrolled` based on the current scroll position on page load
+    if (lastScrollY > 50) {
+      setIsScrolled(true); // If page is already scrolled down
+    } else {
+      setIsScrolled(false); // If page is at the top
+    }
+
+    const handleScroll = () => {
+      // Prevent setting isScrolled if scroll position is at the top or no scroll
+      if (window.scrollY > 50 && window.scrollY > lastScrollY) {
+        setIsScrolled(true); // Scrolling down
+      } else if (window.scrollY <= 50) {
+        setIsScrolled(false); // No scroll or at the top
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={`bg-[#e6e6dd] shadow-md ${
-        isSearchOpen ? "backdrop-blur-md" : ""
-      } transition-all duration-500`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${
+        isScrolled ? "translate-y-0" : "-translate-y-full"
+      } bg-white shadow-md`}
     >
       <Container>
         <nav className="flex items-center justify-between py-2 px-4 relative">
@@ -51,17 +80,11 @@ const Navbar = () => {
 
           {/* Right Section */}
           <div className="flex items-center space-x-6 relative">
-            {/* Search Section */}
+            {/* New Search Section */}
             <div
-              className={`flex items-center  rounded-md overflow-hidden transition-all duration-500 ease-in-out shadow-lg ${
-                isSearchOpen ? "w-[300px] bg-white shadow-xl" : "w-[40px]"
+              className={`flex items-center transition-all duration-500 ease-in-out rounded-md overflow-hidden ${
+                isSearchOpen ? "w-[300px] bg-gray-100 shadow-md" : "w-[40px]"
               }`}
-              style={{
-                transform: isSearchOpen ? "translateY(-10px)" : "translateY(0)",
-                boxShadow: isSearchOpen
-                  ? "0 4px 10px rgba(0, 0, 0, 0.2)"
-                  : "none",
-              }}
             >
               <input
                 type="text"

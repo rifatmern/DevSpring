@@ -1,5 +1,12 @@
 import React from "react";
 import Container from "../extra/Container";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebookMessenger } from "react-icons/fa6";
+import { BiLogoWhatsappSquare } from "react-icons/bi";
+
+
 
 const Footer = () => {
   return (
@@ -12,7 +19,9 @@ const Footer = () => {
             <div className="w-full sm:w-1/2 lg:w-1/3">
               <h2 className="text-3xl font-extrabold mb-4">DevSpring</h2>
               <p className="text-gray-300 leading-relaxed">
-                Building smarter, faster, and more innovative web solutions. Join us in transforming ideas into impactful digital experiences.
+                Building smarter, faster, and more innovative web solutions.
+                Join us in transforming ideas into impactful digital
+                experiences.
               </p>
             </div>
 
@@ -89,14 +98,17 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} DevSpring. Crafted with ❤️ for
               developers by developers.
             </p>
+            
+
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://facebook.com/profile.php?id=61565617242986"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
               >
-                <i className="fab fa-facebook fa-lg"></i>
+                <i className="fab fa-facebook fa-lg"><FaSquareFacebook />
+                </i>
               </a>
               <a
                 href="https://twitter.com"
@@ -104,15 +116,35 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
               >
-                <i className="fab fa-twitter fa-lg"></i>
+                <i className="fab fa-twitter fa-lg"><FaTwitterSquare />
+                </i>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/groups/14523833/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
               >
-                <i className="fab fa-linkedin fa-lg"></i>
+                <i className="fab fa-linkedin fa-lg"><FaLinkedin />
+                </i>
+              </a>
+              <a
+                href="https://www.messenger.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
+              >
+                <i className="fab fa-facebook-messenger fa-lg"><FaFacebookMessenger />
+                </i>
+              </a>
+              <a
+                href="https://wa.me/<+8801770560025>"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
+              >
+                <i className="fab fa-whatsapp fa-lg"><BiLogoWhatsappSquare />
+                </i>
               </a>
             </div>
           </div>
