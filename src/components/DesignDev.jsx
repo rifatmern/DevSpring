@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from "../extra/Container";
-import ac1 from "../assets/ac1.png";
+import ac1 from "../assets/all.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const DesignDev = () => {
@@ -10,8 +10,8 @@ const DesignDev = () => {
         <div className="mb-[60px]">
           <h1 className="text-[35px] font-bold">Design and development</h1>
         </div>
-        <div className="flex">
-          <div className="w-[320px] h-[400px] mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="flex space-x-[60px]">
+          <div className="w-[320px] h-[400px]  bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="w-full h-[200px]">
               <img
                 src={ac1}
@@ -33,7 +33,7 @@ const DesignDev = () => {
             </div>
           </div>
 
-          <div className="w-[320px] h-[400px] mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="w-[320px] h-[400px] bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="w-full h-[200px]">
               <img
                 src={ac1}
@@ -55,7 +55,7 @@ const DesignDev = () => {
             </div>
           </div>
 
-          <div className="w-[320px] h-[400px] mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="w-[320px] h-[400px] bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="w-full h-[200px]">
               <img
                 src={ac1}
@@ -77,7 +77,7 @@ const DesignDev = () => {
             </div>
           </div>
 
-          <div className="w-[320px] h-[400px] mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="w-[320px] h-[400px] bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="w-full h-[200px]">
               <img
                 src={ac1}

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../extra/Container";
-import banner from "../assets/banner.png";
+// import banner from "../assets/banner.png";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Banner = () => {
@@ -29,11 +29,11 @@ const Banner = () => {
           </div>
 
           <div className="">
-            <img
+            {/* <img
               src={banner}
               alt="Video Banner"
               className="w-full h-auto object-cover"
-            />
+            /> */}
             <div className=" bottom-4 left-4 bg-white bg-opacity-80 px-6 py-3 rounded-b-sm shadow-lg">
               <p className="text-xl font-semibold text-gray-800">Video</p>
             </div>

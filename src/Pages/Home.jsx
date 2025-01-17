@@ -5,6 +5,8 @@ import Menu from '../components/Menu'
 import Banner from '../components/Banner'
 import ActiveCourses from '../components/ActiveCourses'
 import DesignDev from '../components/DesignDev'
+import Market from '../components/Market'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
     <Banner/>
     <ActiveCourses/>
     <DesignDev/>
+    <Market/>
+    <Footer/>
     </>
   )
 }
